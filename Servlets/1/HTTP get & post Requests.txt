@@ -1,0 +1,48 @@
+ServletRequest Interface
+    An object of ServletRequest is used to provide the client request information to a servlet such as content type, content length, parameter names and values, header informations, attributes etc. 
+
+GET : GET method is used to appends form data to the URL in name or value pair.
+1) In case of Get request, only limited amount of data can be sent because data is sent in header.
+2) Get request is not secured because data is exposed in URL bar.
+3) Get request can be bookmarked.
+4) Get request is idempotent . It means second request will be ignored until response of first request is delivered
+5) Get request is more efficient and used more than Post.
+
+
+POST : POST is a method that is supported by HTTP
+In case of post request, large amount of data can be sent because data is sent in body.
+Post request is secured because data is not exposed in URL bar.
+Post request cannot be bookmarked.
+Post request is non-idempotent.
+Post request is less efficient and used less than get.
+
+Anatomy of Get Request
+
+The query string (name/value pairs) is sent inside the URL of a GET request:
+
+    GET/RegisterDao.jsp?name1=value1&name2=value2  
+Some other features of GET requests are:
+
+    It remains in the browser history
+    It can be bookmarked
+    It can be cached
+    It have length restrictions
+    It should never be used when dealing with sensitive data
+    It should only be used for retrieving the data
+
+
+Anatomy of Post Request
+
+The query string (name/value pairs) is sent in HTTP message body for a POST request:
+
+    POST/RegisterDao.jsp HTTP/1.1  
+    Host: www. javatpoint.com  
+    name1=value1&name2=value2  
+
+Some other features of POST requests are:
+
+    This requests cannot be bookmarked
+    This requests have no restrictions on length of data
+    This requests are never cached
+    This requests do not retain in the browser history
+

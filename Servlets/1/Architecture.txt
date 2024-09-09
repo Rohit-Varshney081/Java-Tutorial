@@ -1,0 +1,42 @@
+Execution of Java Servlets
+
+Execution of Servlets basically involves Six basic steps: 
+
+    The Clients send the request to the Web Server.
+    The Web Server receives the request.
+    The Web Server passes the request to the corresponding servlet.
+    The Servlet processes the request and generates the response in the form of output.
+    The Servlet sends the response back to the webserver.
+    The Web Server sends the response back to the client and the client browser displays it on the screen.
+
+The Servlet Container
+
+Servlet container, also known as Servlet engine, is an integrated set of objects that provide a run time environment for Java Servlet components. In simple words, it is a system that manages Java Servlet components on top of the Web server to handle the Web client requests.
+
+Services provided by the Servlet container: 
+
+    Network Services: Loads a Servlet class. The loading may be from a local file system, a remote file system or other network services. The Servlet container provides the network services over which the request and response are sent.
+    Decode and Encode MIME-based messages: Provides the service of decoding and encoding MIME-based messages.
+    Manage Servlet container: Manages the lifecycle of a Servlet.
+    Resource management Manages the static and dynamic resources, such as HTML files, Servlets, and JSP pages.
+    Security Service: Handles authorization and authentication of resource access.
+    Session Management: Maintains a session by appending a session ID to the URL path.
+
+How to configure a Java Servlet?
+
+    Configuration of Java Servlet is defined inside a deployment descriptor file – web.xml.
+
+What is a Servlet Filter?
+    A Servlet Filter is an additional component for performing pre-post processing work on the web requests like logging, monitoring, debugging and troubleshooting.
+
+How web container handles the servlet request?
+
+The web container is responsible to handle the request. Let's see how it handles the request.
+
+    maps the request with the servlet in the web.xml file.
+    creates request and response objects for this request
+    calls the service method on the thread
+    The public service method internally calls the protected service method
+    The protected service method calls the doGet method depending on the type of request.
+    The doGet method generates the response and it is passed to the client.
+    After sending the response, the web container deletes the request and response objects. The thread is contained in the thread pool or deleted depends on the server implementation.

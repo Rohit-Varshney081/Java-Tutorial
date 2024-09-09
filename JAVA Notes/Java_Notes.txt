@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------------------------------------------------------------------
+Static variable :
+        In Java, a static variable is a variable that belongs to the class itself rather than 
+        to instances of the class. 
+        This means that regardless of how many instances (objects) of the class are created,
+        there will be only one copy of the static variable in memory, shared by all instances of the class. 
+        Static variables are also known as class variables because they are associated with the class 
+        rather than with any specific instance of the class.
+-------------------------------------------------------------------------------------------------------------------------------------------
+Widening :
+ --Moving from data type of less size to a data type of wider size.
+-------------------------------------------------------------------------------------------------------------------------------------------
+Narrowing :
+ -- It is a vice-versa of widening.This may result into a loss of information.
+ -- It uses typecasting.
+-------------------------------------------------------------------------------------------------------------------------------------------
+Overflow :
+ -- It occurs when a value is too large to be represented within the range of a particular data type.
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Data Type       Default Value 	Default size
+boolean 	    false 	        1 bit
+char 	        '\u0000'    	2 byte
+byte 	        0 	            1 byte
+short 	        0 	            2 byte
+int 	        0 	            4 byte
+long 	        0L 	            8 byte
+float 	        0.0f 	        4 byte
+double 	        0.0d 	        8 byte
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Constructor:
+    In Java, a constructor is a special type of method that is used to initialize objects of a class.
+    Constructors have the same name as the class and do not have a return type, not even void.
+
+Its Type :
+    1.Default constructor (or non-parameterized constructor)
+    2.Parameterized constructor
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Instance Initializer block :
+-- It is used to initialize the instance data member. It run each time when object of the class is created.
+-- There are mainly three rules for the instance initializer block. They are as follows:
+    1.The instance initializer block is created when instance of the class is created.
+    2.The instance initializer block is invoked after the parent class constructor is invoked (i.e. after super() constructor call).
+    3.The instance initializer block comes in the order in which they appear.
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+    new keyword :
+        --The new keyword is used to allocate memory at runtime. All objects get memory in Heap memory area.
+
+    static keyword :
+        --The static keyword in Java is used to declare members (variables and methods) that belong to the class itself, rather than to instances of the class (objects).
+        
+    this keyword :
+        --In Java, the this keyword is a reference to the current object within a method or constructor. It can be used to refer to instance variables and methods of the current class.
+
+-------------------------------------------------------------------------------------------------------------------------------------------

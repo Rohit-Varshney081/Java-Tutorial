@@ -1,0 +1,82 @@
+Servlet technology is used to create a web application (resides at server side and generates a dynamic web page).
+Servlet is an API that provides many interfaces and classes including documentation.
+Servlet is a class that extends the capabilities of the servers and responds to the incoming requests. It can respond to any requests.
+Servlet is a web component that is deployed on the server to create a dynamic web page.
+
+The properties of Servlets are as follows:
+
+    Servlets work on the server side.
+    Servlets are capable of handling complex requests obtained from the web server.
+
+Servlets APIs
+Servlets are built from two packages: 
+
+    javax.servlet(Basic)
+    javax.servlet.http(Advance)
+
+
+--Robust
+--Scalable
+--CGI----Common Gateway Interface
+Few Interface And Classes in it are :
+--Servlet
+--GenericServlet
+--HttpServlet
+--ServletRequest
+--ServletResponse
+
+WEB APPLICATION :
+A web application is an application accessible from the web. A web application is composed of web components like Servlet, JSP, Filter, etc. and other elements such as HTML, CSS, and JavaScript. The web components typically execute in Web Server and respond to the HTTP request.
+
+CGI (Common Gateway Interface):
+CGI technology enables the web server to call an external program and pass HTTP request information to the external program to process the request. For each request, it starts a new process.
+
+Disadvantages of CGI :
+There are many problems in CGI technology:
+
+    If the number of clients increases, it takes more time for sending the response.
+    For each request, it starts a process, and the web server is limited to start processes.
+    It uses platform dependent language e.g. C, C++, perl.
+
+The advantages of Servlet are as follows:
+
+    Better performance: because it creates a thread for each request, not process.
+    Portability: because it uses Java language.
+    Robust: JVM manages Servlets, so we don't need to worry about the memory leak, garbage collection, etc.
+    Secure: because it uses java language.
+    Faster than CGI :
+    Platform Independent :
+    Removes overhead of creating a new process.
+    The web container creates threads for handling the multiple requests to the Servlet. Threads have many benefits over the Processes such as they share a common memory area, lightweight, cost of communication between the threads are low.
+
+War File
+
+A war (web archive) File contains files of a web project. It may have servlet, xml, jsp, image, html, css, js etc. files.
+
+Advantage of war file
+
+saves time: The war file combines all the files into a single unit. So it takes less time while transferring file from client to server.
+
+How to create war file?
+
+To create war file, you need to use jar tool of JDK. You need to use -c switch of jar, to create the war file.
+
+Go inside the project directory of your project (outside the WEB-INF), then write the following command:
+
+    jar -cvf projectname.war *  
+
+Here, -c is used to create file, -v to generate the verbose output and -f to specify the arhive file name.
+
+The * (asterisk) symbol signifies that all the files of this directory (including sub directory).
+How to deploy the war file?
+
+There are two ways to deploy the war file.
+
+    By server console panel
+    By manually having the war file in specific folder of server.
+
+How to extract war file manually?
+
+To extract the war file, you need to use -x switch of jar tool of JDK. Let's see the command to extract the war file.
+
+    jar -xvf projectname.war  

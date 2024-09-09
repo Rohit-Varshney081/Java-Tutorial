@@ -1,0 +1,46 @@
+************************************************************************Inheritance************************************************************************************
+Inheritance is mechanism in which one object aquires all properties and behaviors of a parent object.
+> It provides code reusability(reuse of methods & fields of parent class & add new methods &fields in current class).
+> Used for method overriding (runtime polymorphism can be achieved).
+> Syntax : class subclass extends Superclass{
+    //methods & fields
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+> Types of Inheritance:
+        -Single 
+        -Multilevel
+        -Hierarchical
+        -Multiple
+        -Hybrid
+        
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Types of Relationship between classes in JAVA:
+-- IS-A relationship (known as Inheritance)  --[Tightly bind]
+-- HAS-A relationship (known as Association) --[not Tightly bind]
+      -- Association is the relation between two separate classes which establishes through their Objects.
+      -- It is a unidirectional association.
+      -- HAS-A relationship has further two types:
+            -- Aggreagtion -> If a class have an entity reference, it is known as Aggregation.
+            -- Composition
+
+Advantages of relationship:
+--Code Reusability
+--Cost cutting
+--Reduce Redundancy
+                  ______________________________________
+                  |            ASSOCIATION             |
+                  |      _______________________       |
+                  |      |   Aggreagtion(Weak)  |      |
+                  |      |   _______________    |      |
+                  |      |  |  Composition  |   |      |
+                  |      |  |   (Strong)    |   |      |
+                  |      |  |_______________|   |      |
+                  |      |______________________|      |
+                  |____________________________________|
+
+Example : Car HAS-A Music Player (Aggreagtion) i.e weak bonding
+          Car HAS-A Engine (Composition) i.e strong bonding
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+****NOTE :The "IS_A relationship", also known as the inheritance relationship, represents a type of relationship between two classes where one class is a specialized version of another.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,85 @@
+JSP directives :
+The jsp directives are messages that tells the web container how to translate a JSP page into the corresponding servlet.
+
+Its type :
+
+    page directive
+    include directive
+    taglib directive
+
+Syntax of JSP Directive
+
+    <%@ directive attribute="value" %> 
+
+JSP page directive
+
+The page directive defines attributes that apply to an entire JSP page.
+Syntax of JSP page directive
+
+    <%@ page attribute="value" %>
+
+Attributes of JSP page directive
+
+    import         - class,interface,all members of package.
+    contentType    -MIME type 
+    extends        -parent class
+    info           -getServletInfo()
+    buffer         -sets buffer size in KB (default size=8KB)
+    language       -specifies the scripting language (default value is java)
+    isELIgnored    - default=false
+    isThreadSafe    -multithreaded
+    autoFlush
+    session
+    pageEncoding
+    errorPage       -define the error page , if exception then reedirect to error page.
+    isErrorPage - current page is error page.
+
+e.g: <html>  
+    <body>  
+    
+    <%@ page info="composed by Sonoo Jaiswal" %>  
+    Today is: <%= new java.util.Date() %>  
+    
+    </body>  
+    </html>
+
+Jsp Include Directive :
+
+The include directive is used to include the contents of any resource it may be jsp file, html file or text file. The include directive includes the original content of the included resource at page translation time.
+
+Advantage of Include directive
+        -> Code Reusability
+
+Syntax of include directive
+
+    <%@ include file="resourceName" %> 
+
+ e.g: <html>  
+    <body>  
+    
+    <%@ include file="header.html" %>  
+    
+    Today is: <%= java.util.Calendar.getInstance().getTime() %>  
+    
+    </body>  
+    </html>
+
+JSP Taglib directive:
+
+The JSP taglib directive is used to define a tag library that defines many tags. We use the TLD (Tag Library Descriptor) file to define the tags.
+
+Syntax JSP Taglib directive
+
+    <%@ taglib uri="uri of the tag library" prefix="prefix of tag library" %>  
+
+e.g: <html>  
+    <body>  
+    
+    <%@ taglib uri="http://www.javatpoint.com/tags" prefix="mytag" %>  
+    
+    <mytag:currentDate/>  
+    <mytag:set var="name" value="Hello"></mytag:set>
+    <mytag:out value="${name}"></mytag:out>
+    
+    </body>  
+    </html>

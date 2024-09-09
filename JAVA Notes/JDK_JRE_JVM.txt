@@ -1,0 +1,34 @@
+_____________________________________________________________________________________________________________________________
+JVM -Java Virtual Machine
+It is an abstract machine.
+It is a specification that provides a runtime environment in which java bytecode can be executed.
+It is a platform dependent.
+-----------------------------------------------------------------------------------------------------------------------------
+    It performs tasks as:
+    -Loads code
+    -Verifies code
+    -Executes code
+    -Provides runtime environment
+-----------------------------------------------------------------------------------------------------------------------------
+    There are three notions of JVM :
+    -specification
+    -Implementation (refers to JRE)
+    -Runtime instance
+-----------------------------------------------------------------------------------------------------------------------------
+    JVM provides definitions for :
+    -Memory Area 
+    -Class file format
+    -Register set
+    -Garbage-collected heap
+    -Fatal error reporting etc
+_____________________________________________________________________________________________________________________________
+
+JRE -Java Runtime Environment
+It is a set of software tools which are used for developing Java application.
+It contains a set of libraries(e.g. rt.jar) + other files that JVM uses at runtime.
+_____________________________________________________________________________________________________________________________
+
+JDK -Java Development Kit
+It is a software development environment which is used to develop Java application and applets.
+It contains JRE + development tools.
+_____________________________________________________________________________________________________________________________

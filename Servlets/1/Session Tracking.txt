@@ -1,0 +1,19 @@
+Session simply means a particular interval of time.
+
+Session Tracking is a way to maintain state (data) of an user. It is also known as session management in servlet.
+
+Http protocol is a stateless so we need to maintain state using session tracking techniques. Each time user requests to the server, server treats the request as the new request. So we need to maintain the state of an user to recognize to particular user.
+
+HTTP is stateless that means each request is considered as the new request.
+
+Why use Session Tracking?
+
+To recognize the user It is used to recognize the particular user.
+Session Tracking Techniques
+
+There are four techniques used in Session tracking:
+
+    Cookies
+    Hidden Form Field
+    URL Rewriting
+    HttpSession

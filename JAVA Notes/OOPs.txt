@@ -1,0 +1,50 @@
+*********************************************************OOPs - Objeect Oriented Programming****************************************************************
+
+It is programming methodology that uses object and class and used to implement real world scenarios.
+1.Object            2.Class            3.Abstraction  
+4.Encapsulation     5.Inheritance      6. Polymorphism
+
+Object           - real world entites that consists of state and behavior. (instance of a class and required to access members of a class)
+State            - information about object
+Behavior         - things that an object do
+Class            - objects that have similar type of state and behavior are grouped into  a category
+                 - first letter of class name is capitalized.
+                 -logical entity or a blueprint from which we can create an object
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Abstraction      - representing necessary information or features and hiding the complex & unnecessary information form user.
+
+Encapsulation    
+                 - the ability to combine state and behavior into a single entity like class.
+                 - it allows the data and methods to be bound together.
+                 -Binding (or wrapping) code and data together into a single unit
+                 - private prevents the non-essential parts of the program to be hidden from other class.
+
+Inheritance      - the process by which an object acquires the properties of another object
+                 - provides the ability to take the data and methods from an existing class and derive a new class.
+                 - It is used to achieve runtime polymorphism.
+                 - "extends" keyword is used to inherit data and methods from an existing class.
+                 -class Newclass extends oldclass{................}
+                 -Oldclass is known as base class or super class or existing class or parent class.
+                 -Newclass is known as derived class or subclass or child class .
+
+Polymorphism     - an ability to have more than one form and behaving differently in different conditions (Example : "+" performs addition and cocatenation operation )
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Access Modifiers : 
+   - define the scope of variables
+   - assigns characteristics to the methods , data and variables .
+                                                            |1.default| 2.public| 3.protected| 4.private|
+   Accessible inside the class :                            |  YES    |   YES   |    YES     |   YES    |
+   Accessible within the subclass inside the same package:  |  YES    |   NO    |    YES     |   YES    |
+   Accessible outside the package:                          |  NO     |   NO    |    NO      |   YES    |
+   Accessible within the subclass outside the package:      |  NO     |   NO    |    YES     |   YES    |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Advantages of OOPs:
+--makes development and maintenance easier.
+--Modular approach
+--Reusability
+--code organization 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+****NOTE : In Java programming, instantiation means creating new instances of objects to be used in a program.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------

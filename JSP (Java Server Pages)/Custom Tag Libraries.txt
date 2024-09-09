@@ -1,0 +1,72 @@
+Custom Tags in JSP :
+Custom tags are user-defined tags. They eliminates the possibility of scriptlet tag and separates the business logic from the JSP page.
+
+The same business logic can be used many times by the use of custom tag.
+
+ The key advantages of Custom tags are as follows:
+
+    Eliminates the need of scriptlet tag The custom tags eliminates the need of scriptlet tag which is considered bad programming approach in JSP.
+    Separation of business logic from JSP The custom tags separate the the business logic from the JSP page so that it may be easy to maintain.
+    Re-usability The custom tags makes the possibility to reuse the same business logic again and again.
+
+SYNTAX :
+<prefix:tagname attr1=value1....attrn=valuen >  
+body code  
+</prefix:tagname>
+
+JspTag interface
+
+The JspTag is the root interface for all the interfaces and classes used in custom tag. It is a marker interface.
+
+Tag interface
+
+The Tag interface is the sub interface of JspTag interface. It provides methods to perform action at the start and end of the tag.
+
+Fields of Tag Interface :
+public static int EVAL_BODY_INCLUDE
+public static int EVAL_PAGE
+public static int SKIP_BODY
+public static int SKIP_PAGE 
+
+Methods of Tag interface
+public void setPageContext(PageContext pc)
+public void setParent(Tag t)
+public Tag getParent()
+public int doStartTag()throws JspException
+public int doEndTag()throws JspException
+public void release() 
+
+IterationTag interface
+
+The IterationTag interface is the sub interface of the Tag interface. It provides an additional method to reevaluate the body.
+
+FIELD :public static int EVAL_BODY_AGAIN
+METHOD : public int doAfterBody()throws JspException
+
+TagSupport class
+
+The TagSupport class implements the IterationTag interface. It acts as the base class for new Tag Handlers. It provides some additional methods also.
+
+For creating any custom tag, we need to follow following steps:
+
+    Create the Tag handler class and perform action at the start or at the end of the tag.
+    Create the Tag Library Descriptor (TLD) file and define tags
+    Create the JSP file that uses the Custom tag defined in the TLD file
+
+
+To define the attribute, you need to perform two tasks:
+    Define the property in the TagHandler class with the attribute name and define the setter method
+    define the attribute element inside the tag element in the TLD file
+
+Iteration using JSP Custom Tag :
+For iterating the body content, we need to use the EVAL_BODY_AGAIN constant in the doAfterBody() method. 
+
+Custom URI in JSP Custom Tag:
+We can use the custom URI, to tell the web container about the tld file. In such case, we need to define the taglib element in the web.xml. The web container gets the information about the tld file from the web.xml file for the specified URI
+
+4 FILES Used in it :
+
+    index.jsp
+    web.xml
+    mytags.tld
+    PrintDate.java

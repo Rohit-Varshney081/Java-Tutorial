@@ -1,0 +1,29 @@
+Difference between abstract class and interface :
+_____________________________________________________________________________________________________________________________________________________________
+|**S.No** | **Abstract Class**                                                   | **Interface**                                                            |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 1       | Abstract class can have abstract and non-abstract methods.           | Interface can have only abstract methods. Since Java 8, it can have      |
+|         |                                                                      | default and static methods also.                                         |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 2       | Abstract class doesn't support multiple inheritance.                 | Interface supports multiple inheritance.                                 |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 3       | Abstract class can have final, non-final, static, and non-static     | Interface has only static and final variables.                           |
+|         | variables.                                                           |                                                                          |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 4       | Abstract class can provide the implementation of interface.          | Interface can't provide the implementation of abstract class.            |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 5       | The `abstract` keyword is used to declare an abstract class.         | The `interface` keyword is used to declare an interface.                 |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 6       | An abstract class can extend another Java class and implement        | An interface can extend another Java interface only.                     |
+|         | multiple Java interfaces.                                            |                                                                          |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 7       | An abstract class can be extended using the keyword `extends`.       | An interface can be implemented using the keyword `implements`.          |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 8       | A Java abstract class can have class members like private, protected,| Members of a Java interface are public by default.                       |
+|         | etc.                                                                 |                                                                          |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 9       | **Example:**                                                         | **Example:**                                                             |
+|         | ```public abstract class Shape { public abstract void draw(); }```   | ```public interface Drawable { void draw(); }```                         |
+|---------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 10      | **Summary:** Abstract class achieves partial abstraction (0 to 100%).| **Summary:** Interface achieves full abstraction (100%).                 |
+|_________|______________________________________________________________________|__________________________________________________________________________|

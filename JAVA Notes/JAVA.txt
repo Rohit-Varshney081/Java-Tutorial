@@ -1,0 +1,62 @@
+***************************************************************************JAVA********************************************************************
+Developed by James Gosling in 1995 at Sun Microsystem (By Green Team)
+Sometimes JAVA stands for "Just Another Virtual Accelerator".
+Firstly , it was called "Greentalk" & file extension was ".gt"
+OLD name : Oak (Symbol of strength)
+New Name : JAVA (kind of coffee -  espresso beans)
+Now Java is under Oracle corporation
+Works on "WORA" - Write once , run anywhere.
+Latest version of JAVA - Java 22 Or (JDK 22) --March 19th,2024
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Features of JAVA: (called as Java buzzwords)
+--High level language
+--object-oriented
+--Simple
+--secure programming
+--Platform independent
+--Robust
+--Portable
+--Architecture Neutral
+--Dynamic
+--Interpreted
+--High Performance
+--Multithreading
+--Distributed
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Application:
+--Desktop Applications (Standalone Application) such as acrobat reader , media player , antivirus etc.(AWT and Swing are used in java for it )
+--Web Application such as irctc.co.in etc (Technologies used in these are Servlet , JSP, Spring , Hibernate , JSF , Struts)
+--Embedded systems (like set-up boxes)
+--Smart Card
+--Robotics
+--Mobile Application (used Java ME for it )
+--Enterprise Application (e.g. Banking)(EJB is used for it )
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+JAVA platforms/edition :
+-- JAVA SE (Standard Edition)
+-- JAVA EE(Enterprise Edition)
+-- JAVA ME (Micro Edition)
+-- JAVA FX 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Java uses "javac" as compiler to compile source code to byte code.
+Byte code files are loaded , interpreted and converted to machine code at the clients machine 
+by a special compiler called the "JVM" - Java Virtual Machine.
+
+How to run Java file ?
+step 1 : Java source code is saved as "file.java"
+step 2 : "file.java" is compiled using javac compiler
+step 3 : class file is generated using as "file.class" called as "Byte Code" (platform independent)
+
+Example :
+                JAVA CODE -----> Compiler ------> BYTE CODE
+                (example.java)                    (example.class)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+                
+*****NOTE : JAVA has run time environment (JRE) and API , it is called as platform.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------

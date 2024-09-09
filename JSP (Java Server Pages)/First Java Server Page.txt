@@ -1,0 +1,18 @@
+Creating a simple JSP Page :
+    To create the first JSP page, write some HTML code as given below, and save it by .jsp extension. We have saved this file as index.jsp. Put it in a folder and paste the folder in the web-apps directory in apache tomcat to run the JSP page.
+
+index.jsp :
+    <html>  
+    <body>  
+    <% out.print(2*5); %>  
+    </body>  
+    </html> 
+
+How to run a simple JSP Page?
+
+Follow the following steps to execute this JSP page:
+
+    Start the server
+    Put the JSP file in a folder and deploy on the server
+    Visit the browser by the URL http://localhost:portno/contextRoot/jspfile, for example, http://localhost:8888/myapplication/index.jsp
+

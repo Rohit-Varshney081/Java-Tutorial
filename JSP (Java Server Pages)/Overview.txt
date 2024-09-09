@@ -1,0 +1,57 @@
+JSP :
+JSP technology is used to create web application just like Servlet technology. It can be thought of as an extension to Servlet because it provides more functionality than servlet such as expression language, JSTL, etc.
+
+A JSP page consists of HTML tags and JSP tags. 
+JSP tags are reusable.
+The JSP pages are easier to maintain than Servlet because we can separate designing and development. 
+It provides some additional features such as Expression Language, Custom Tags, etc.
+
+Advantages of JSP over Servlet:
+1) Extension to Servlet : JSP technology is the extension to Servlet technology. We can use all the features of the Servlet in JSP.
+In addition to, we can use implicit objects, predefined tags, expression language and Custom tags in JSP, that makes JSP development easy.
+
+2) Easy to maintain: JSP can be easily managed because we can easily separate our business logic with presentation logic.
+
+3) Fast Development: No need to recompile and redeploy : If JSP page is modified, we don't need to recompile and redeploy the project. The Servlet code needs to be updated and recompiled if we have to change the look and feel of the application.
+
+4) Less code than Servlet: In JSP, we can use many tags such as action tags, JSTL, custom tags, etc. that reduces the code. Moreover, we can use EL, implicit objects, etc.
+
+The Lifecycle of a JSP Page:
+
+    Translation of JSP Page
+    Compilation of JSP Page
+    Classloading (the classloader loads class file)
+    Instantiation (Object of the Generated Servlet is created).
+    Initialization ( the container invokes jspInit() method).
+    Request processing ( the container invokes _jspService() method).
+    Destroy ( the container invokes jspDestroy() method).
+
+JSP APIs:
+
+    javax.servlet.jsp
+    javax.servlet.jsp.tagext
+
+javax.servlet.jsp package:
+    The two interfaces are as follows:
+    JspPage
+    HttpJspPage
+
+    The classes are as follows:
+    JspWriter
+    PageContext
+    JspFactory
+    JspEngineInfo
+    JspException
+    JspError
+
+Methods of JspPage interface
+
+    1. public void jspInit(): It is invoked only once during the life cycle of the JSP when JSP page is requested firstly. It is used to perform initialization. It is same as the init() method of Servlet interface.
+    2. public void jspDestroy(): It is invoked only once during the life cycle of the JSP before the JSP page is destroyed. It can be used to perform some clean up operation.
+
+Method of HttpJspPage interface:
+
+    public void _jspService(): It is invoked each time when request for the JSP page comes to the container. It is used to process the request. The underscore _ signifies that you cannot override this method.
+
+
+

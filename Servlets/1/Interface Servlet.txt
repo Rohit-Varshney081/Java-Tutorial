@@ -1,0 +1,164 @@
+The Servlet interface defines methods to initialize a servlet, to receive and respond to client requests, and to destroy a servlet and its resources. 
+Servlet interface provides common behavior to all the servlets.Servlet interface defines methods that all servlets must implement.
+
+Methods of Servlet interface :
+1. public void init(ServletConfig config) ------ initializes the servlet. It is the life cycle method of servlet and invoked by the web container only once.
+2. public void service(ServletRequest request,ServletResponse response) ------ provides response for the incoming request. It is invoked at each request by the web container.
+3. public void destroy()------is invoked only once and indicates that servlet is being destroyed.
+4. public ServletConfig getServletConfig() ------ returns the object of ServletConfig.
+5. public String getServletInfo() ------- returns information about servlet such as writer, copyright, version etc.
+
+The servlet example can be created by three ways:
+
+    By implementing Servlet interface,
+    By inheriting GenericServlet class, (or)
+    By inheriting HttpServlet class
+
+>>>> We are going to use apache tomcat server in this example :
+     
+    Create a directory structure
+    Create a Servlet
+    Compile the Servlet
+    Create a deployment descriptor
+    Start the server and deploy the project
+    Access the servlet
+
+1)Create a directory structures
+
+The directory structure defines that where to put the different types of files so that web container may get the information and respond to the client.
+The Sun Microsystem defines a unique standard to be followed by all the server vendors.
+
+2)Create a Servlet
+There are three ways to create the servlet.
+
+    By implementing the Servlet interface
+    By inheriting the GenericServlet class
+    By inheriting the HttpServlet class
+
+    The HttpServlet class is widely used to create the servlet because it provides methods to handle http requests such as doGet(), doPost, doHead() etc. 
+
+3)Compile the servlet
+
+For compiling the Servlet, jar file is required to be loaded. Different Servers provide different jar files:
+    Jar file	       Server
+1) servlet-api.jar	   Apache Tomcat
+2) weblogic.jar    	   Weblogic
+3) javaee.jar	       Glassfish
+4) javaee.jar	       JBoss
+
+Two ways to load the jar file
+
+    set classpath
+    paste the jar file in JRE/lib/ext folder
+
+Put the java file in any folder. After compiling the java file, paste the class file of servlet in WEB-INF/classes directory. 
+
+4)Create the deployment descriptor (web.xml file)
+
+The deployment descriptor is an xml file, from which Web Container gets the information about the servlet to be invoked.
+ The web container uses the Parser to get the information from the web.xml file. There are many xml parsers such as SAX, DOM and Pull.
+
+There are many elements in the web.xml file. Here is given some necessary elements to run the simple servlet program.
+web.xml file
+
+    <web-app>  
+      
+    <servlet>  
+    <servlet-name>sonoojaiswal</servlet-name>  
+    <servlet-class>DemoServlet</servlet-class>  
+    </servlet>  
+      
+    <servlet-mapping>  
+    <servlet-name>sonoojaiswal</servlet-name>  
+    <url-pattern>/welcome</url-pattern>  
+    </servlet-mapping>  
+      
+    </web-app> 
+
+5)Start the Server and deploy the project
+
+To start Apache Tomcat server, double click on the startup.bat file under apache-tomcat/bin directory. 
+
+One Time Configuration for Apache Tomcat Server
+
+You need to perform 2 tasks:
+
+    set JAVA_HOME or JRE_HOME in environment variable (It is required to start server).
+    Change the port number of tomcat (optional). It is required if another server is running on same port (8080).
+
+How to deploy the servlet project
+
+Copy the project and paste it in the webapps folder under apache tomcat. 
+
+there are several ways to deploy the project. They are as follows:
+    
+    By copying the context(project) folder into the webapps directory
+    By copying the war folder into the webapps directory
+    By selecting the folder path from the server
+    By selecting the war file from the server
+
+
+6) How to access the servlet
+
+Open browser and write http://hostname:portno/contextroot/urlpatternofservlet. 
+
+
+Interfaces in javax.servlet package
+
+There are many interfaces in javax.servlet package. They are as follows:
+
+    Servlet
+    ServletRequest
+    ServletResponse
+    RequestDispatcher
+    ServletConfig
+    ServletContext
+    SingleThreadModel
+    Filter
+    FilterConfig
+    FilterChain
+    ServletRequestListener
+    ServletRequestAttributeListener
+    ServletContextListener
+    ServletContextAttributeListener
+
+Classes in javax.servlet package
+
+There are many classes in javax.servlet package. They are as follows:
+
+    GenericServlet
+    ServletInputStream
+    ServletOutputStream
+    ServletRequestWrapper
+    ServletResponseWrapper
+    ServletRequestEvent
+    ServletContextEvent
+    ServletRequestAttributeEvent
+    ServletContextAttributeEvent
+    ServletException
+    UnavailableException
+
+Interfaces in javax.servlet.http package
+
+There are many interfaces in javax.servlet.http package. They are as follows:
+
+    HttpServletRequest
+    HttpServletResponse
+    HttpSession
+    HttpSessionListener
+    HttpSessionAttributeListener
+    HttpSessionBindingListener
+    HttpSessionActivationListener
+    HttpSessionContext (deprecated now)
+
+Classes in javax.servlet.http package
+
+There are many classes in javax.servlet.http package. They are as follows:
+
+    HttpServlet
+    Cookie
+    HttpServletRequestWrapper
+    HttpServletResponseWrapper
+    HttpSessionEvent
+    HttpSessionBindingEvent
+    HttpUtils (deprecated now)

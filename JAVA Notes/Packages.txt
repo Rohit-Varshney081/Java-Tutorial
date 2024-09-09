@@ -1,0 +1,25 @@
+A java package is a group of similar types of classes, interfaces and sub-packages.
+Package in java can be categorized in two form, built-in package and user-defined package.
+There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.
+
+Advantage of Java Package :
+1) Java package is used to categorize the classes and interfaces so that they can be easily maintained.
+2) Java package provides access protection.
+3) Java package removes naming collision.
+4) It helps to remove ambiguity in case where more than one developer is working on a project.
+
+There are three ways to access the package from outside the package :
+1. import package.*; //// in this Subpackages is not accessible.
+2. import package.classname;
+3. fully qualified name. //// e.g. pack.A obj = new pack.A();
+
+How to send the class file to another directory or drive?
+To Compile: e:\sources> javac -d c:\classes Simple.java
+To Run:     e:\sources> set classpath=c:\classes;.;
+            e:\sources> java mypack.Simple
+Another way to run this program by -classpath switch of java:
+e:\sources> java -classpath c:\classes mypack.Simple
+
+
+
+**** NOTE: If you import a package, subpackages will not be imported.

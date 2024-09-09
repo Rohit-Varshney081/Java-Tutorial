@@ -1,0 +1,52 @@
+ARRAY : an array is a collection of similar type of elements which has contiguous memory location.
+
+> Java array inherits the Object class, and implements the Serializable as well as Cloneable interfaces.
+
+Advantages:
+    > Code Optimization: It makes the code optimized, we can retrieve or sort the data efficiently.
+    > Random access: We can get any data located at an index position.
+Disadvantages:
+    > Size Limit: We can store only the fixed size of elements in the array. It doesn't grow its size at runtime. To solve this problem, collection framework is used in Java which grows automatically.
+
+There are two types of array:
+    1.Single Dimensional Array (or single-subscripted variable)
+    2.Multidimensional Array (or Array of arrays)
+
+Syntax to Declare a 1D-Array in Java:
+    dataType[] arr; (or)  
+    dataType []arr; (or)  
+    dataType arr[]; 
+
+Creating an array:
+    int arr[]=new int[5]; //declaration and instantiation
+    int a[]={33,3,4,5};//declaration, instantiation and initialization 
+
+Anonymous Array: An arry has no name. Don't need to declare the array while passing an array to the method.
+
+public class TestAnonymousArray{    
+    static void printArray(int arr[]){  
+    for(int i=0;i<arr.length;i++)  
+    System.out.println(arr[i]);
+    }  
+public static void main(String args[]){  
+    printArray(new int[]{10,22,44,66});//passing anonymous array to method  
+}}
+
+Non-Primitive Array : A non-primitive array in Java is an array that stores references to objects rather than storing the actual objects themselves.Non-primitive arrays are used to hold objects of classes, rather than primitive data types like int, float, or char. Example : A[] a = new A[3];
+
+Syntax of 2d-Array:
+    int a[][] or int[][] a or int [][]a or int []a[];
+
+Creating a 2D Array: 
+    int a[][]=new int[2][3];
+    int a[][]={{1,2,3,4,5},{6,7,8,9,10}};
+
+Copying a JAVA Array :- using "arraycopy()" method of System class.
+SYNTAX: public static void arraycopy(Object source, int SourceStart , Object Target , int TargetStart , int Size);
+
+*****CLONING an Array in JAVA:
+ Java array implements the cloneable interface , we can create the clone of the Java array .
+ If we create the clone of a single-dimensional array, it creates the deep copy of the Java array.
+ It means, it will copy the actual value. But, if we create the clone of a multidimensional array, it creates the shallow copy of the Java array which means it copies the references.
+ 
+****NOTE : The Java Virtual Machine (JVM) throws an ArrayIndexOutOfBoundsException if length of the array in negative, equal to the array size or greater than the array size while traversing the array.

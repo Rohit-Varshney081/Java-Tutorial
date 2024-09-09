@@ -1,0 +1,26 @@
+Interface : An interface in Java is a blueprint of a class. It has static constants and abstract methods.
+Java Interface also represents IS-A relationship.
+An interface is declared by using the interface keyword.
+
+Reasons to use it :
+- It is used to achieve abstraction and multiple inheritance in Java.
+- It can be used to achieve loose coupling.
+- It cannot be instantiated just like the abstract class.
+
+It provides total abstraction; means all the methods in an interface are declared with the empty body, and all the fields are public, static and final by default. A class that implements an interface must implement all the methods declared in the interface.
+
+SYNTAX: interface <interface_name>{  
+      
+    // declare constant fields  
+    // declare methods that abstract   
+    // by default.  
+} 
+
+Internal addition by the compiler :
+The Java compiler adds public and abstract keywords before the interface method. Moreover, it adds public, static and final keywords before data members.
+
+Multiple inheritance in Java by interface :
+If a class implements multiple interfaces, or an interface extends multiple interfaces, it is known as multiple inheritance.
+
+Since Java 8, we can have default and static methods in an interface.
+Since Java 9, we can have private methods in an interface.
